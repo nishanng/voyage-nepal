@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:3000/api',
+  baseURL: 'http://localhost:3001', // Change the port to 5000
   withCredentials: false,
   headers: {
     Accept: 'application/json',
@@ -11,10 +11,6 @@ const apiClient = axios.create({
 
 export default {
   search(query) {
-    return apiClient.get('/query', {
-      params: {
-        q: query,
-      },
-    });
+    return apiClient.post('/query', { query }); // Change the method to post and pass the query as an object
   },
 };
