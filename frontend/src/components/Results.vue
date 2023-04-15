@@ -10,15 +10,29 @@
   </template>
   
   <script>
+  import api from '@/api';
+  
   export default {
     data() {
       return {
-        results: null
+        results: null,
       };
     },
-    created() {
-      this.results = this.$route.params.results;
-    }
+    props: {
+      query: String,
+    },
+    watch: {
+      query(newQuery) {
+        this.performSearch(newQuery);
+      },
+    },
+    methods: {
+      performSearch(query) {
+        api.search(query).then((response) => {
+          this.results = response.data;
+        });
+      },
+    },
   };
   </script>
   
