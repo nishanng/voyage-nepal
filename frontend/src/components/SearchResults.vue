@@ -11,17 +11,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      results: null,
-    };
-  },
-  props: {
-    // Removed the query prop
-  },
-  // Removed the watch section
-  methods: {
-    // Removed performSearch method since it's not being used
+  computed: {
+    results() {
+      return this.$route.params.results;
+    },
   },
 };
 </script>
