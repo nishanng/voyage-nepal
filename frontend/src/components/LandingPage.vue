@@ -1,7 +1,7 @@
 <template>
   <div class="landing-page">
     <div class="content-box">
-      <h1>VoyageNepal 🏕️</h1>
+      <h1>VoyageNepal <span>🏕️</span></h1>
       <SearchBox />
     </div>
   </div>
@@ -46,6 +46,9 @@ h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #333;
+}
+h1 span {
+  font-size: 3rem;
 }
 h2 {
   font-weight: 600;

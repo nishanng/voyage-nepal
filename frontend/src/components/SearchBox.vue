@@ -1,9 +1,9 @@
 <template>
   <div class="search-box">
-    <h2>Your own AI companion for Travel</h2>
+    <h2>Your AI companion for Travel</h2>
     <div class="input-wrapper">
       <div class="input-container">
-        <input type="text" v-model="query" placeholder="Express your ideas....." />
+        <input type="text" v-model="query" placeholder="Search for places,hotels,routes, etc....." />
         <div class="search-icon" @click="search">
           <span>✈</span>
         </div>
