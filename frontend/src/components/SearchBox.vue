@@ -2,8 +2,12 @@
   <div class="search-box">
     <h2>Your own AI companion for Travel</h2>
     <div class="input-wrapper">
-      <input type="text" v-model="query" placeholder="Express your ideas....." />
-      <button @click="search">🚀</button>
+      <div class="input-container">
+        <input type="text" v-model="query" placeholder="Express your ideas....." />
+        <div class="search-icon" @click="search">
+          <span>🚀</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -51,9 +55,15 @@ h2 {
   width: 100%;
 }
 
+.input-container {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+}
+
 input {
   border: none;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   padding: 0.8rem 1rem;
   font-size: 1rem;
   outline: none;
@@ -70,19 +80,28 @@ input:focus {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
-button {
-  border: none;
-  border-radius: 0 4px 4px 0;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  color: #fff;
+.search-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #3a86ff;
+  border-radius: 0 4px 4px 0;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 
-button:hover {
+.search-icon:hover {
   background-color: #2a63cc;
+}
+
+.search-icon span {
+  font-size: 1.5rem;
+  color: #fff;
 }
 
 button:focus {
