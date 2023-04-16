@@ -56,28 +56,31 @@ h2 {
   margin-bottom: 1rem;
   color: #333;
 }
+
 /* Style the scrollbar for webkit browsers */
+@media screen and (min-width: 900px) {
+  body {
+    overflow: hidden;
+  }
+}
+
 ::-webkit-scrollbar {
-  width: 4px; /* decrease the width of the scrollbar */
-  background-color: #1c1c1c; /* set the background color of the scrollbar */
+  width: 4px;
+  background-color: #1c1c1c;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background-color: #1c1c1c; /* set the background color of the scrollbar track */
+  background-color: #1c1c1c;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background-color: #4d4d4d;
   border-radius: 3px;
-  height: 20px; /* decrease the height of the scrollbar thumb */
+  height: 20px;
 }
 
-/* On hover */
 ::-webkit-scrollbar-thumb:hover {
   background-color: #7f7f7f;
 }
-
 
 </style>
