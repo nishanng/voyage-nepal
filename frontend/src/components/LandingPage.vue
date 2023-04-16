@@ -56,5 +56,26 @@ h2 {
   margin-bottom: 1rem;
   color: #333;
 }
+/* Style the scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #1c1c1c;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #4d4d4d;
+  border-radius: 3px;
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #7f7f7f;
+}
+
 
 </style>
