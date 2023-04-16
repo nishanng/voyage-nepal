@@ -24,7 +24,7 @@ export default {
   methods: {
     async search() {
       try {
-        const response = await axios.post('/api/query', { query: this.query });
+        const response = await axios.post('http://localhost:3001/api/query', { query: this.query });
         this.$router.push({ name: 'Results', params: { results: response.data } });
       } catch (error) {
         console.error('Error during search:', error);
