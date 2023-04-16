@@ -58,18 +58,20 @@ h2 {
 }
 /* Style the scrollbar for webkit browsers */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px; /* decrease the width of the scrollbar */
+  background-color: #1c1c1c; /* set the background color of the scrollbar */
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background-color: #1c1c1c;
+  background-color: #1c1c1c; /* set the background color of the scrollbar track */
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background-color: #4d4d4d;
   border-radius: 3px;
+  height: 20px; /* decrease the height of the scrollbar thumb */
 }
 
 /* On hover */
