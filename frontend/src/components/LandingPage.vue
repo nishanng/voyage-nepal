@@ -1,7 +1,7 @@
 <template>
   <div class="landing-page">
     <div class="content-box">
-      <h1>VoyageNepal 🚩</h1>
+      <h1>VoyageNepal 🏕️</h1>
       <SearchBox />
     </div>
   </div>

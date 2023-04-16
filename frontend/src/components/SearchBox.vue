@@ -5,7 +5,7 @@
       <div class="input-container">
         <input type="text" v-model="query" placeholder="Express your ideas....." />
         <div class="search-icon" @click="search">
-          <span>🚀</span>
+          <span>✈</span>
         </div>
       </div>
     </div>
