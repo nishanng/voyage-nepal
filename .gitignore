@@ -2,6 +2,9 @@
 node_modules
 /dist
 
+#ignoring the backend 
+backend-repo
+
 
 # local env files
 .env.local
