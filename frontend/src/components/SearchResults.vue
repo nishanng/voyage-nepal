@@ -10,15 +10,18 @@
 </template>
 
 <script>
-import api from '@/api';
-
 export default {
-  name: 'SearchResults',
+  data() {
+    return {
+      results: null,
+    };
+  },
   props: {
-    results: {
-      type: Array,
-      required: true,
-    },
+    // Removed the query prop
+  },
+  // Removed the watch section
+  methods: {
+    // Removed performSearch method since it's not being used
   },
 };
 </script>
