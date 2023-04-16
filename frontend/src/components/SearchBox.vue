@@ -3,7 +3,7 @@
     <h2>Your AI companion for Travel</h2>
     <div class="input-wrapper">
       <div class="input-container">
-        <input type="text" v-model="query" placeholder="Search for places,hotels,routes, etc....." />
+        <input type="text" v-model="query" placeholder="Search for places, hotels, routes and more....." />
         <div class="search-icon" @click="search">
           <span>✈</span>
         </div>
