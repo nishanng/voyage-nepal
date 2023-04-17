@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     handleSearchCompleted(searchResults) {
-      this.results = searchResults;
+      this.results = searchResults[0].text.trim();
     },
   },
 };
