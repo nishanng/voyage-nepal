@@ -1,9 +1,12 @@
+<!-- SearchResults.vue -->
 <template>
   <div class="search-results">
-    <SearchBox />
+    <SearchBox @search-completed="handleSearchCompleted" />
     <div v-if="results" class="response-container">
       <h3>AI Response:</h3>
-      <p>{{ results }}</p>
+      <p>
+        <span v-for="(word, index) in words" :key="index" :style="{ animationDelay: index * 100 + 'ms' }" class="animated-word">{{ word }}&nbsp;</span>
+      </p>
     </div>
   </div>
 </template>
@@ -15,14 +18,25 @@ export default {
   components: {
     SearchBox,
   },
+  data() {
+    return {
+      results: '',
+    };
+  },
   computed: {
-    results() {
-      return this.$route.query.results || '';
+    words() {
+      return this.results.split(' ');
+    },
+  },
+  methods: {
+    handleSearchCompleted(searchResults) {
+      this.results = searchResults;
     },
   },
 };
 </script>
 
+<!---Styling -->
 
 <style scoped>
 .search-results {
@@ -46,5 +60,22 @@ h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: #333;
+}
+
+.animated-word {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>

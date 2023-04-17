@@ -1,9 +1,15 @@
+<!-- SearchBox.vue -->
 <template>
   <div class="search-box">
     <h2>Your AI companion for Travel</h2>
     <div class="input-wrapper">
       <div class="input-container">
-        <input type="text" v-model="query" placeholder="Search for places, hotels, routes and more....." />
+        <input
+          type="text"
+          v-model="query"
+          placeholder="Search for places, hotels, routes and more....."
+          @keyup.enter="search"
+        />
         <div class="search-icon" @click="search">
           <span>✈</span>
         </div>
@@ -25,7 +31,7 @@ export default {
     async search() {
       try {
         const response = await api.search(this.query);
-        this.$router.push({ name: 'Results', params: { results: response.data.text } });
+        this.$emit('search-completed', response.data.text);
       } catch (error) {
         console.error('Error during search:', error);
       }
@@ -34,8 +40,7 @@ export default {
 };
 </script>
 
-<!-- Styling -->
-
+<!-- Original styling -->
 <style scoped>
 .search-box {
   display: flex;
@@ -43,26 +48,22 @@ export default {
   align-items: center;
   width: 100%;
 }
-
 h2 {
   font-weight: 600;
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #333;
 }
-
 .input-wrapper {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-
 .input-container {
   position: relative;
   display: flex;
   flex-grow: 1;
 }
-
 input {
   border: none;
   border-radius: 4px;
@@ -73,15 +74,12 @@ input {
   flex-grow: 1;
   transition: box-shadow 0.3s ease-in-out;
 }
-
 input:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
-
 input:focus {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
-
 .search-icon {
   position: absolute;
   top: 0;
@@ -96,16 +94,13 @@ input:focus {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-
 .search-icon:hover {
   background-color: #2a63cc;
 }
-
 .search-icon span {
   font-size: 1.5rem;
   color: #fff;
 }
-
 button:focus {
   outline: none;
 }
