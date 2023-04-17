@@ -15,14 +15,14 @@ export default {
   components: {
     SearchBox,
   },
-  props: {
-    results: {
-      type: String,
-      default: '',
+  computed: {
+    results() {
+      return this.$route.query.results || '';
     },
   },
 };
 </script>
+
 
 <style scoped>
 .search-results {
