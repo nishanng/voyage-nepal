@@ -2,17 +2,17 @@
   <div class="landing-page">
     <div class="content-box">
       <h1>VoyageNepal <span>🏕️</span></h1>
-      <SearchBox />
+      <Search />
     </div>
   </div>
 </template>
 
 <script>
-import SearchBox from './SearchBox.vue';
+import Search from './Search.vue';
 
 export default {
   components: {
-    SearchBox,
+    Search,
   },
 };
 </script>

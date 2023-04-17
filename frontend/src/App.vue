@@ -1,12 +1,18 @@
+<!-- App.vue -->
 <template>
   <div id="app">
-    <router-view />
+    <Search />
   </div>
 </template>
 
 <script>
+import Search from './components/Search.vue';
+
 export default {
   name: 'App',
+  components: {
+    Search,
+  },
 };
 </script>
 
