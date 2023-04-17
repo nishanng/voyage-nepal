@@ -58,6 +58,8 @@
   import userImg from '@/assets/user.svg';
   
   export default {
+  name: 'SearchComponent',
+
     data() {
       return {
         searchQuery: '',
