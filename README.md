@@ -17,7 +17,7 @@ VoyageNepal is an AI-powered travel companion web app for exploring Nepal. Built
 
 ### Installation
 
-1. Clone the repo: `git clone https://github.com/your-username/voyage-nepal.git`
+1. Clone the repo: `git chttps://github.com/nishanng/voyage-nepal.git`
 2. Change to the project directory: `cd voyage-nepal`
 3. Install dependencies: `cd frontend && npm install`, `cd backend && npm install`
 4. Set up environment variables in `.env.development` and `.env.production` (frontend) and `.env` (backend)
