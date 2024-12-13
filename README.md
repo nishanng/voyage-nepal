@@ -1,4 +1,4 @@
-# VoyageNepal 🚀
+# VoyageNepal 🚀 "Currently Under Development"
 
 VoyageNepal is an AI-powered travel companion web app for exploring Nepal. Built with Vue.js and Express.js, it leverages OpenAI's GPT-3 for valuable travel insights.
 
