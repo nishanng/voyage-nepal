@@ -12,7 +12,7 @@ VoyageNepal is an AI-powered travel companion web app for exploring Nepal. Built
 
 ### Prerequisites
 
-- Node.js (v12.x or higher)
+- Node.js (v16.x or higher)
 - npm (v6.x or higher)
 
 ### Installation
